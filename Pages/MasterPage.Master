@@ -1,0 +1,66 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs"
+    Inherits="WebApplication1.Pages.MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server" profile="http://www.w3.org/2005/10/profile">
+    <title>Walk For Health Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta http-equiv="pragma" content="no-cache" />
+</head>
+<body style="height: 100%">
+    <form id="MainForm" runat="server" style="height: 100%">   
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;
+        background-color: rgb(204,204,204);">
+        <tr >
+            <td style="height: 100%" />
+            <td align="center" valign="top">
+                <table border="0" cellspacing="0" cellpadding="0" style="background-color: white;
+                    width: 1000px">
+                  
+                    <tr>
+                        <td onclick="window.location.href='HomePage.aspx';" style="cursor: pointer" colspan="2">
+                            <asp:Image runat="server" ID="imgHeader" ImageUrl="~/Images/Header.jpg" BorderWidth="0px"
+                                meta:resourcekey="imgHeaderResource1" Width="100%" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 5px" colspan="2" align="right">
+                        <asp:Button ID="btnLogOut" runat="server" Text="LogOut" BackColor="#A8A385" 
+                                Font-Bold="False" Font-Names="AR BERKLEY" Font-Size="Medium" ForeColor="Black" 
+                                onclick="btnLogOut_Click"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td runat="server" id="tdContentPlaceHolder" valign="top" colspan="2">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+                            <%--<asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="4000">
+                                <ProgressTemplate>
+                                    <div style="position: absolute; top: 300px; left: 550px; text-align: center;">
+                                        <asp:Image ID="imgLoader" runat="server" ImageUrl="~/Images/loader.gif" />
+                                    </div>
+                                </ProgressTemplate>
+                            </asp:UpdateProgress>--%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 5px" colspan="2" />
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Image runat="server" ID="imgFooter" ImageUrl="~/Images/Footer.jpg" 
+                                BorderWidth="0px" Width="100%"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td />
+        </tr>
+    </table>
+    </form>
+    <form method="post" id="ParametersForm" action="" style="display: none" class="NoPrint">
+    <input type="hidden" id="hidParameters" name="hidParameters" />
+    </form>
+</body>
+</html>
